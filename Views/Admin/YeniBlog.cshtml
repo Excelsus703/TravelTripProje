@@ -1,0 +1,30 @@
+﻿@model TravelTripProje.Models.Siniflar.Blog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Blog Ekleme</h2>
+<br />
+<form class="form-group" method="post">
+    <b>@Html.LabelFor(x => x.Baslik)</b>
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control", @style = "margin-top:10px; width:500px;" })
+    <br />
+    <b>@Html.LabelFor(x => x.Tarih)</b>
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control", @style = "margin-top:10px; width:500px;" })
+    <br />
+    <b>@Html.LabelFor(x => x.Aciklama)</b>
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control", @style = "margin-top:10px; height:300px; width:1000px;" })
+    <br />
+    <b>@Html.LabelFor(x => x.BlogImage)</b>
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control", @style = "margin-top:10px; width:1000px;" })
+    <br />
+    <b>@Html.LabelFor(x => x.Durum)</b>
+    @Html.DropDownListFor(
+        x => x.Durum,
+        new SelectList(Enum.GetValues(typeof(TravelTripProje.Models.Siniflar.Blog.BegeniDurum))),
+        new { @class = "form-control", @style = "margin-top:10px; width:150px;" }
+    )
+    <br />
+    <button class="btn btn-primary">Blog Kaydet</button>
+</form>

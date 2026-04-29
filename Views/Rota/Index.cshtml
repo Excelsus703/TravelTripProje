@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", Arial, Helvetica, sans-serif
+        }
+
+        .myLink {
+            display: none
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:1100px;">
+
+        <!-- Good offers -->
+        <div class="w3-container w3-margin-top">
+            <h3>İşte Rotamızda Bulunan Mekanlar !</h3>
+            <h6>Her Biri birbirinden güzel rotamızda bulunan yeni mekanlar</h6>
+        </div>
+        <div class="w3-row-padding w3-text-white w3-large">
+            <div class="w3-half w3-margin-bottom">
+                <div class="w3-display-container">
+                    <img src="https://www.kulturportali.gov.tr/repoKulturPortali/large/SehirRehberi//GezilecekYer/20251225115822358_Trabzon_Sumela_Manastiri(4)%20kopya.jpg?format=jpg&quality=50" alt="Sümela Manastırı" style="width:100%">
+                    <span class="w3-display-bottomleft w3-padding">Sümela Manastırı</span>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half w3-margin-bottom">
+                        <div class="w3-display-container">
+                            <img src="https://www.kulturportali.gov.tr/repoKulturPortali/large/SehirRehberi//GezilecekYer/20171012101722559_2S.UrfaBalikliGolServetUYGUN_20170613141640931.jpg?format=jpg&quality=50" alt="Balıklı Göl" style="width:100%">
+                            <span class="w3-display-bottomleft w3-padding">Balıklı Göl</span>
+                        </div>
+                    </div>
+                    <div class="w3-half w3-margin-bottom">
+                        <div class="w3-display-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Cappadociasunrise.jpg" alt="Kapadokya" style="width:100%">
+                            <span class="w3-display-bottomleft w3-padding">Kapadokya</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half w3-margin-bottom">
+                        <div class="w3-display-container">
+                            <img src="https://www.kulturportali.gov.tr/repoKulturPortali/large/SehirRehberi//GezilecekYer/20260210102713924_Gurun%20%20%20Gokpinar%20Golu%20(3)%20kopya.jpg?format=jpg&quality=50" alt="Gökpınar Gölü" style="width:100%">
+                            <span class="w3-display-bottomleft w3-padding">Gökpınar Gölü</span>
+                        </div>
+                    </div>
+                    <div class="w3-half w3-margin-bottom">
+                        <div class="w3-display-container">
+                            <img src="https://www.kulturportali.gov.tr/contents/images/Adana_Yılan_Castle_View_5464x3640px__300%20dpi%20(3)%20kopya.jpg" alt="Yılan Kalesi" style="width:100%">
+                            <span class="w3-display-bottomleft w3-padding">Yılan Kalesi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Explore Nature -->
+        <div class="w3-container">
+            <h3>Doğayı Keşfet</h3>
+            <p>İşte Rotamızdaki Doğa Güzellikleri.</p>
+            <br />
+        </div>
+        <div class="w3-row-padding">
+            <div class="w3-half w3-margin-bottom">
+                <img src="https://www.kulturportali.gov.tr/repoKulturPortali/large/SehirRehberi//GezilecekYer/20210409141427224_ANTALYA%20%20MANAVGAT%20%20SELALESI%20SERVET%20UYGUN%2020190513_8.JPG?format=jpg&quality=50" alt="Antalya" style="width:100%">
+                <div class="w3-container w3-white">
+                    <h3>Manavgat Şelalesi, Antalya</h3>
+                    <p>Manavgat Şelalesi, Antalya'nın Manavgat ilçesinde, Manavgat Nehri üzerinde bulunan bir şelaledir.</p>
+                </div>
+            </div>
+            <div class="w3-half w3-margin-bottom">
+                <img src="https://www.kulturportali.gov.tr/repoKulturPortali/large/SehirRehberi//GezilecekYer/20251226155008641_Nevsehir_Ihlara_Vadisi(1)%20kopya.jpg?format=jpg&quality=50" alt="Aksaray" style="width:100%">
+                <div class="w3-container w3-white">
+                    <h3>Ihlara Vadisi, Aksaray</h3>
+                    <p>Aksaray’ın Güzelyurt ilçesi sınırları içerisinde bulunan Ihlara Vadisi, dünya üzerindeki kanyonlar arasında önemli bir yere sahiptir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <script>
+        // Tabs
+        function openLink(evt, linkName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("myLink");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(linkName).style.display = "block";
+            evt.currentTarget.className += " w3-red";
+        }
+
+        // Click on the first tablink on load
+        document.getElementsByClassName("tablink")[0].click();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3>Blog Listesi</h3>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>BlogID</th>
+        <th>Başlık</th>
+        <th>Favoriler</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Baslik</td>
+            <td>
+                @if (x.Durum == Blog.BegeniDurum.Aktif)
+                {
+                    <span style="color: #FFD700; font-size: 1.8rem; text-shadow: 0 0 3px rgba(255,200,0,0.4);">★</span>
+                }
+                else
+                {
+                    <span style="color: #bbb; font-size: 1.8rem;">☆</span>
+                }
+            </td>
+            <td><a href="/Admin/BlogSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/BlogGetir/@x.ID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Blog/BlogDetay/@x.ID" class="btn btn-secondary">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniBlog/" class="btn btn-primary">Yeni Blog</a>

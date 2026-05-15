@@ -40,7 +40,7 @@ Bu yapi sayesinde public taraftaki blog deneyimi ile yonetim operasyonlari birbi
 
 # ⚙️ Kurulum
 1. Repoyu klonla
-git clone https://github.com/kullanici-adi/easy-trip.git
+git clone https://github.com/Excelsus703/easy-trip.git
 
 3. Veritabanını oluştur
 Visual Studio'da Package Manager Console'u aç:
